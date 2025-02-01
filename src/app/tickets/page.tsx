@@ -1,5 +1,15 @@
+import { initialTickets } from "../data";
+
 const TicketsPage = () => {
-    return <h2 className="text-lg">TicketsPage</h2>;
+    return (
+        <div>
+            {initialTickets.map((ticket) => (
+                <div key={ticket.id}>
+                    <h2 className="text-lg">{ticket.title}</h2>
+                </div>
+            ))}
+        </div>
+    );
 };
 
 export default TicketsPage;
